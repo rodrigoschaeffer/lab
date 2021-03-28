@@ -12,10 +12,9 @@ import br.com.lab.lab01.dto.PersonDto;
 public interface RegisterApi {
 
     @CrossOrigin
-    @GetMapping(path = "person/{id}")
+    @GetMapping(path = "person/{personId}")
     ResponseEntity<PersonDto> searchPersonById(
-        @PathVariable Long account
-        
+        @PathVariable Long personId
     );
     
 }
