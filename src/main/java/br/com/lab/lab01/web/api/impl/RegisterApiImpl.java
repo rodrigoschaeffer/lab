@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.lab.lab01.dto.PersonDto;
+import br.com.lab.lab01.model.dto.PersonDto;
 import br.com.lab.lab01.service.RegisterService;
 import br.com.lab.lab01.web.api.RegisterApi;
 
@@ -18,7 +18,7 @@ public class RegisterApiImpl implements RegisterApi{
 
     @Override
     public ResponseEntity<PersonDto> searchPersonById(Long personId){
-        System.out.println("Entrou no método");
+        System.out.println("Recebeu o parametro: " + personId);
         ResponseEntity<PersonDto> serviceReturn = registerService.searchPersonById(personId);
         return serviceReturn;
     }
