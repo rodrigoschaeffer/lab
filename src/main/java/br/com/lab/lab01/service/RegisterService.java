@@ -8,4 +8,6 @@ public interface RegisterService {
 
     ResponseEntity<PersonDto> searchPersonById(Long personId);
     
+    ResponseEntity<PersonDto> savePerson(PersonDto personDto);
+
 }

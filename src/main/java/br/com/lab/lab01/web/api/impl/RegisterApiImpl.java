@@ -18,9 +18,14 @@ public class RegisterApiImpl implements RegisterApi{
 
     @Override
     public ResponseEntity<PersonDto> searchPersonById(Long personId){
-        System.out.println("Recebeu o parametro: " + personId);
         ResponseEntity<PersonDto> serviceReturn = registerService.searchPersonById(personId);
         return serviceReturn;
+    }
+
+    @Override
+    public ResponseEntity<PersonDto> savePerson(PersonDto personDto) {
+        ResponseEntity<PersonDto> serviceReturn = registerService.savePerson(personDto);
+        return serviceReturn; 
     }
     
 }
